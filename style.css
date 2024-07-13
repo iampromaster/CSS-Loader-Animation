@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.loader {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.loader span {
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right,#00fffc,rgb(30,28,28));
+  border-radius: 50px;
+  animation: loadAnim 1s infinite cubic-bezier(.2,.68,.18,1.08);
+}
+
+@keyframes loadAnim {
+  0%,100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(.4);
+    opacity: 0.1;
+  }
+}
+
+.loader span:nth-child(1){
+  animation-delay: -.6s;
+}
+.loader span:nth-child(2){
+  animation-delay: -.5s;
+}
+.loader span:nth-child(3){
+  animation-delay: -.4s;
+}
+.loader span:nth-child(4){
+  animation-delay: -.3s;
+}
+.loader span:nth-child(5){
+  animation-delay: -.2s;
+}
+.loader span:nth-child(6){
+  animation-delay: -.1s;
+}
+
